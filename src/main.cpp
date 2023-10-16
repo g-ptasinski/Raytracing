@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 
+#include "../include/vec3.h"
+
 int main()
 {
 	std::ofstream myfile;
@@ -15,6 +17,8 @@ int main()
 	{
 		for(int i = 0; i < nx ; i++)
 		{
+			vec3 col( float(i) / float(nx), float(j) / float(ny) , 0.2);
+
 			float r = float(i) / float(nx);
 			float g = float(j) / float(ny);
 			float b = 0.2;
