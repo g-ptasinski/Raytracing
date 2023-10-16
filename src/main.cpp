@@ -2,6 +2,7 @@
 #include <fstream>
 
 #include "../include/vec3.h"
+#include "../include/color.h"
 
 int main()
 {
