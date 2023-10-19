@@ -3,6 +3,7 @@
 
 #include "../include/vec3.h"
 #include "../include/color.h"
+#include "../include/ray.h"
 
 int main()
 {
