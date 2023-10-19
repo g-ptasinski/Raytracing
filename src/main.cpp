@@ -18,20 +18,12 @@ int main()
 	{
 		for(int i = 0; i < nx ; i++)
 		{
-			vec3 col( float(i) / float(nx), float(j) / float(ny) , 0.2);
+			auto pixel_color = color(double(i)/(nx-1), double(j)/(ny-1), 0);
 
-			float r = float(i) / float(nx);
-			float g = float(j) / float(ny);
-			float b = 0.2;
-
-			int ir = int(255.99*r);
-			int ig = int(255.99*g);
-			int ib = int(255.99*b);
-
-			//std::cout << i << " | "<< j<< "\n";
-			myfile << ir << " " << ig << " " << ib << "\n";
+            write_color(myfile, pixel_color);
 		}
 	}
+	
 	myfile.close();
 
 	return 0;
