@@ -4,9 +4,11 @@
 #include <iostream>
 
 class ray{
+
 public:
 
 private:
+
 }
 
 #endif

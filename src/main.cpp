@@ -21,6 +21,7 @@ int main()
 			auto pixel_color = color(double(i)/(nx-1), double(j)/(ny-1), 0);
 
             write_color(myfile, pixel_color);
+            
 		}
 	}
 	
