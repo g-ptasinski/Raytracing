@@ -5,21 +5,26 @@
 #include "../include/color.h"
 #include "../include/ray.h"
 
-double hit_sphere(const point3& center, double radius, const ray& r) {
+double hit_sphere(const point3& center, double radius, const ray& r) 
+{
     vec3 oc = r.origin() - center;
     auto a = r.direction().length_squared();
     auto half_b = dot(oc, r.direction());
     auto c = oc.length_squared() - radius*radius;
     auto discriminant = half_b*half_b - a*c;
 
-    if (discriminant < 0) {
+    if (discriminant < 0) 
+    {
         return -1.0;
-    } else {
+    } 
+    else 
+    {
         return (-half_b - sqrt(discriminant) ) / a;
     }
 }
 
-color ray_color(const ray& r) {
+color ray_color(const ray& r) 
+{
     auto t = hit_sphere(point3(0,0,-1), 0.5, r);
     if (t > 0.0) {
         vec3 N = unit_vector(r.at(t) - vec3(0,0,-1));
