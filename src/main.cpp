@@ -4,6 +4,7 @@
 #include "../include/vec3.h"
 #include "../include/color.h"
 #include "../include/ray.h"
+#include "../include/hittable.h"
 
 double hit_sphere(const point3& center, double radius, const ray& r) 
 {
